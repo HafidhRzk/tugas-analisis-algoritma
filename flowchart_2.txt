@@ -1,0 +1,53 @@
++----------------------------+
+|         Start               |
++----------------------------+
+| distanceAB = 1000           |
+| aliPosition = 0             |
+| aliSpeed = 2                |
+| aliTime = 0                 |
+| baduPosition = 0            |
+| baduSpeed = 3               |
+| baduStartTime = 10          |
+| baduTime = baduStartTime    |
++----------------------------+
+          |
+          v
+  +--------------------------+
+  |         Loop Start        |<--------------------------+
+  +--------------------------+                           |
+          |                                              |
+          v                                              |
++------------------------------+                         |
+| Update Ali's position and speed|                       |
+| aliPosition += aliSpeed       |                        |
+| aliSpeed += 0.1               |                        |
+| aliTime += 1                  |                        |
++------------------------------+                         |
+          |                                              |
+          v                                              |
++----------------------------------------+               |
+| Update Badu's position if baduTime >=  |               |
+| baduStartTime                          |               |
+| If true, baduPosition += baduSpeed     |               |
+| baduTime += 1                          |               |
++----------------------------------------+               |
+          |                                              |
+          v                                              |
++--------------------------------------------------+     |
+| Check if aliPosition + baduPosition >= distanceAB|     |
+| If true, print passing time and positions        |     |
++--------------------------------------------------+     |
+          |                                              |
+         Yes                                             No
+          |                                              |
+          v                                              |
++----------------------------+                           |
+| Print passing time and      |                          |
+| positions                   |                          |
++----------------------------+                           |
+          |                                              |
+          v                                              |
++----------------------------+                           |
+|           End               |                          |
++----------------------------+                           |
+                                                          
